@@ -7,9 +7,9 @@
 以下是我们目前公开发布的模型概览：
 
 | 名称           | 数据来源     | 训练数据大小 | 词表大小 | 模型大小 | 下载地址 |
-| ------------  | ----------- | ------------ | -------- | -------- | -------- |
-| RoBERTa Tiny  | 百科 + 新闻  |   35G      | 21128    | 29MB | [点我下载](https://zhuiyi.ai) |
-| RoBERTa Small | 百科 + 新闻  |   35G      | 21128  | 52MB  | [点我下载](https://zhuiyi.ai) |
-| SimBERT Base  | [百度知道](http://zhidao.baidu.com/) | 2200万相似句组  | 21128  | 371MB  | [点我下载](https://zhuiyi.ai) |
+| ------------  | ----------- | -----------| -------- | -------- | -------- |
+| RoBERTa Tiny  | 百科 + 新闻  |     35G    | 21128    | 29MB | [点我下载](https://zhuiyi.ai) |
+| RoBERTa Small | 百科 + 新闻  |     35G    | 21128  | 52MB  | [点我下载](https://zhuiyi.ai) |
+| SimBERT Base  | [百度知道](http://zhidao.baidu.com/) | 2200万相似句组 | 21128  | 371MB  | [点我下载](https://zhuiyi.ai) |
 
 
