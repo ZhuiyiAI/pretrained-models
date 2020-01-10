@@ -12,4 +12,35 @@
 | RoBERTa Small | 百科 + 新闻  |     35G    | 21128  | 52MB  | [点我下载](https://zhuiyi.ai) |
 | SimBERT Base  | [百度知道](http://zhidao.baidu.com/) | 2200万相似句组 | 21128  | 371MB  | [点我下载](https://zhuiyi.ai) |
 
+## 模型详情
 
+此处对每个模型进行较为详细的介绍
+
+### RoBERTa Tiny
+
+### RoBERTa Small
+
+### SimBERT Base
+
+## 模型训练
+
+## 如何引用
+
+Bibtex：
+
+```tex
+@techreport{zhuiyipretrainedmodels,
+  title={Open Language Pre-trained Model Zoo - ZhuiyiAI},
+  author={Jianlin Su},
+  year={2020},
+  url = "https://github.com/ZhuiyiAI/pretrained-models",
+}
+```
+
+## 联系我们
+
+邮箱：ai@wezhuiyi.com
+
+## 相关链接
+
+追一科技：https://zhuiyi.ai
