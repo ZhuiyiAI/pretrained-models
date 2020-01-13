@@ -8,9 +8,9 @@
 
 | 名称           | 数据来源     | 训练数据大小 | 词表大小 | 模型大小 | 下载地址 |
 | ------------  | ----------- | -----------| -------- | -------- | -------- |
-| RoBERTa Tiny  | 百科,新闻 等  |     35G    | 21128    | 29MB | [百度网盘](https://pan.baidu.com/s/1BWhzP8K9rHi2uWtOUQoX5Q)(beum) |
-| RoBERTa Small | 百科,新闻 等  |     35G    | 21128  | 52MB  | [百度网盘](https://pan.baidu.com/s/1uGfQmX1Kxcv_cXTVsvxTsQ)(6xhq) |
-| SimBERT Base  | [百度知道](http://zhidao.baidu.com/) | 2200万相似句组 | 21128  | 371MB  | [百度网盘](https://pan.baidu.com/s/1AqoD49xkeAO4KHsBrmFFOA)(hjqc) |
+| RoBERTa Tiny  | 百科,新闻 等  |     35G    | 21128    | 27MB | [百度网盘](https://pan.baidu.com/s/1BWhzP8K9rHi2uWtOUQoX5Q)(beum) |
+| RoBERTa Small | 百科,新闻 等  |     35G    | 21128  | 48MB  | [百度网盘](https://pan.baidu.com/s/1AqoD49xkeAO4KHsBrmFFOA)(hjqc) |
+| SimBERT Base  | [百度知道](http://zhidao.baidu.com/) | 2200万相似句组 | 21128  | 344MB  | [百度网盘](https://pan.baidu.com/s/1uGfQmX1Kxcv_cXTVsvxTsQ)(6xhq) |
 
 ## 模型详情
 
@@ -18,9 +18,27 @@
 
 ### RoBERTa Tiny
 
+<strong>【配置】</strong> 4层模型，hidden size为312，对Embedding层做了低秩分解(312->128->312)，可以用<a href="https://github.com/bojone/bert4keras/tree/master/examples">bert4keras</a>加载使用。
+
+<strong>【训练】</strong> 基于<a href="https://github.com/bojone/bert4keras/tree/master/pretraining">bert4keras</a>在TPU v3-8上训练，使用带梯度累积的LAMB优化器，批大小为800，累积4步更新，相当于以批大小3200训练了125k步（前3125步为warmup）。
+
+<strong>【备注】</strong> 速度跟<a href="https://github.com/brightmart/albert_zh">albert tiny</a>一致，普通分类性能也基本一致，但由于roberta模型并没有参数共享这个约束，所以在生成式任务等复杂任务上效果优于albert tiny。
+
 ### RoBERTa Small
 
+<strong>【配置】</strong> 跟bert base一致，12层模型，hidden size为768。
+
+<strong>【训练】</strong> 基于<a href="https://github.com/bojone/bert4keras/tree/master/pretraining">bert4keras</a>在TPU v3-8上训练，使用带梯度累积的LAMB优化器，批大小为800，累积4步更新，相当于以批大小3200训练了125k步（前3125步为warmup）。
+
+<strong>【备注】</strong> 速度跟<a href="https://github.com/brightmart/albert_zh">albert small</a>一致，普通分类性能也基本一致，但由于roberta模型并没有参数共享这个约束，所以在生成式任务等复杂任务上效果优于albert small。
+
 ### SimBERT Base
+
+<strong>【配置】</strong> 6层模型，hidden size为384，对Embedding层做了低秩分解(384->128->384)，可以用<a href="https://github.com/bojone/bert4keras/tree/master/examples">bert4keras</a>加载使用。
+
+<strong>【训练】</strong> 基于<a href="https://github.com/bojone/bert4keras/tree/master/pretraining">bert4keras</a>在TPU v3-8上训练，使用带梯度累积的LAMB优化器，批大小为800，累积4步更新，相当于以批大小3200训练了125k步（前3125步为warmup）。
+
+<strong>【备注】</strong> 速度跟<a href="https://github.com/brightmart/albert_zh">albert small</a>一致，普通分类性能也基本一致，但由于roberta模型并没有参数共享这个约束，所以在生成式任务等复杂任务上效果优于albert small。
 
 ## 模型训练
 
