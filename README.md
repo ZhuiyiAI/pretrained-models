@@ -18,11 +18,11 @@
 
 ### RoBERTa Tiny
 
-<strong>【配置】</strong> 4层模型，hidden size为312，对Embedding层做了低秩分解(312->128->312)，可以用<a href="https://github.com/bojone/bert4keras/tree/master/examples">bert4keras</a>加载使用。
+- <strong>【配置】</strong> 4层模型，hidden size为312，对Embedding层做了低秩分解(312->128->312)，可以用<a href="https://github.com/bojone/bert4keras/tree/master/examples">bert4keras</a>加载使用。
 
-<strong>【训练】</strong> 使用<a href="https://github.com/bojone/bert4keras/tree/master/pretraining">bert4keras</a>在TPU v3-8上训练，使用带梯度累积的LAMB优化器，批大小为800，累积4步更新，相当于以批大小3200训练了125k步（前3125步为warmup）。
+- <strong>【训练】</strong> 使用<a href="https://github.com/bojone/bert4keras/tree/master/pretraining">bert4keras</a>在TPU v3-8上训练，使用带梯度累积的LAMB优化器，批大小为800，累积4步更新，相当于以批大小3200训练了125k步（前3125步为warmup）。
 
-<strong>【备注】</strong> 速度跟<a href="https://github.com/brightmart/albert_zh">albert tiny</a>一致，普通分类性能也基本一致，但由于roberta模型并没有参数共享这个约束，所以在生成式任务等复杂任务上效果优于albert tiny。
+- <strong>【备注】</strong> 速度跟<a href="https://github.com/brightmart/albert_zh">albert tiny</a>一致，普通分类性能也基本一致，但由于roberta模型并没有参数共享这个约束，所以在生成式任务等复杂任务上效果优于albert tiny。
 
 ### RoBERTa Small
 
