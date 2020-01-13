@@ -78,3 +78,6 @@ def gen_synonyms(text, n=100, k=20):
     Z /= (Z**2).sum(axis=1, keepdims=True)**0.5
     argsort = np.dot(Z[1:], -Z[0]).argsort()
     return [r[i + 1] for i in argsort[:k]]
+
+
+print(gen_synonyms(u'今天天气如何'))
